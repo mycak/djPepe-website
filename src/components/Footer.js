@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 const FooterWrapper = styled.div`
   width: 100%;
-  height: 5vh;
-  border: solid blue;
+  min-height: 5vh;
 `
 
 const Footer = () => <FooterWrapper>Footers</FooterWrapper>

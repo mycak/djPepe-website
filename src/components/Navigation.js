@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 const NavigationWrapper = styled.div`
   width: 100%;
-  border: solid red;
-  height: 5vh;
+  min-height: 5vh;
 `
 
 const Navigation = () => (

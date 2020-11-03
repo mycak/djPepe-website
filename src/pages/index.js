@@ -1,30 +1,38 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
+// import { graphql } from 'gatsby'
+// import Img from 'gatsby-image'
 import styled from 'styled-components'
+import Hero from '../components/Hero'
+import News from '../components/News'
 
 const HomePageStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  .image--wrapper {
+    max-height: auto;
+    max-width: auto;
+  }
 `
 
-export default function HomePage({ data }) {
+export default function HomePage() {
   return (
     <HomePageStyles>
-      <Img fluid={data.file.childImageSharp.fluid} />
+      <Hero />
+      <News />
     </HomePageStyles>
   )
 }
 
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "hero.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 70, maxHeight: 70) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query {
+//     file(relativePath: { eq: "hero.jpg" }) {
+//       childImageSharp {
+//         fluid(maxHeight: 1000) {
+//           ...GatsbyImageSharpFluid
+//         }
+//       }
+//     }
+//   }
+// `

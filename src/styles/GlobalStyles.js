@@ -1,21 +1,20 @@
 import { createGlobalStyle } from 'styled-components'
+import font from '../assets/fonts/SyneMono-Regular.ttf'
 
 const GlobalStyles = createGlobalStyle`
-/* @import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600;700;800;900&display=swap'); */
   @font-face {
-    font-family: Overpass;
-    src: url('https://fonts.googleapis.com/css2?family=Overpass:wght@100;200;300;400;600;700;800;900&display=swap');
+    font-family: SyneMono;
+    src: url(${font});
   }
-
   :root {
     --black: #2E2E2E;
     --white: #fff;
   }
   html {
-    font-family: Overpass;
+    font-family: SyneMono;
     font-size: 10px;
     color: #fff;
-    background: #2E2E2E;
+    background: #000000;
     width: 100%;
     height: 100%;
   }

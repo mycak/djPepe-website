@@ -2,16 +2,16 @@ import { createGlobalStyle } from 'styled-components'
 import font from '../assets/fonts/SyneMono-Regular.ttf'
 
 const GlobalStyles = createGlobalStyle`
-  @font-face {
-    font-family: SyneMono;
+  /* @font-face {
+    font-family: Syne Mono;
     src: url(${font});
-  }
+  } */
   :root {
     --black: #2E2E2E;
     --white: #fff;
   }
   html {
-    font-family: SyneMono;
+    font-family: Syne Mono;
     font-size: 10px;
     color: #fff;
     background: #000000;

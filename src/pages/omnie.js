@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import SEO from './SEO'
 
 const AboutMeStyles = styled.div`
   min-height: 100vh;
@@ -9,9 +10,12 @@ const AboutMeStyles = styled.div`
   }
 `
 const omnie = () => (
-  <AboutMeStyles>
-    <h2>O mnie</h2>
-  </AboutMeStyles>
+  <>
+    <SEO />
+    <AboutMeStyles>
+      <h2>O mnie</h2>
+    </AboutMeStyles>
+  </>
 )
 
 export default omnie

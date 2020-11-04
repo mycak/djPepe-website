@@ -4,6 +4,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Hero from '../components/Hero'
 import News from '../components/News'
+import SEO from './SEO'
 
 const HomePageStyles = styled.div`
   display: flex;
@@ -18,10 +19,13 @@ const HomePageStyles = styled.div`
 
 export default function HomePage() {
   return (
-    <HomePageStyles>
-      <Hero />
-      <News />
-    </HomePageStyles>
+    <>
+      <SEO />
+      <HomePageStyles>
+        <Hero />
+        <News />
+      </HomePageStyles>
+    </>
   )
 }
 

@@ -4,7 +4,6 @@ import { gsap } from 'gsap'
 gsap.registerPlugin(CSSRulePlugin)
 
 const loaderAnimation = () => {
-  console.log('essa')
   const ruleAfter = CSSRulePlugin.getRule('body:after')
   const ruleBefore = CSSRulePlugin.getRule('body:before')
   const loaderopacity = CSSRulePlugin.getRule('.loader--opacity')

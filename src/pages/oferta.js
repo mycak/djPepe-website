@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import SEO from './SEO'
 
 const OfferStyles = styled.div`
   min-height: 100vh;
@@ -9,9 +10,12 @@ const OfferStyles = styled.div`
   }
 `
 const Oferta = () => (
-  <OfferStyles>
-    <h2>Oferta</h2>
-  </OfferStyles>
+  <>
+    <SEO />
+    <OfferStyles>
+      <h2>Oferta</h2>
+    </OfferStyles>
+  </>
 )
 
 export default Oferta

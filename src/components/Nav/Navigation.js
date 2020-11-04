@@ -60,11 +60,11 @@ const Navigation = () => {
         <li>
           <TransitionLink
             exit={{
-              trigger: ({ exit, node }) => loaderAnimation(exit, node),
               length: 0.8,
             }}
             entry={{
-              delay: 0.1,
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
+              length: 4,
             }}
             activeClassName="active"
             to="/"
@@ -75,11 +75,11 @@ const Navigation = () => {
         <li>
           <TransitionLink
             exit={{
-              trigger: ({ exit, node }) => loaderAnimation(exit, node),
               length: 0.8,
             }}
             entry={{
-              delay: 0.1,
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
+              length: 2,
             }}
             to="/omnie"
           >
@@ -89,11 +89,11 @@ const Navigation = () => {
         <li>
           <TransitionLink
             exit={{
-              trigger: ({ exit, node }) => loaderAnimation(exit, node),
               length: 0.8,
             }}
             entry={{
-              delay: 0.1,
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
+              length: 2,
             }}
             to="/oferta"
           >
@@ -103,11 +103,11 @@ const Navigation = () => {
         <li>
           <TransitionLink
             exit={{
-              trigger: ({ exit, node }) => loaderAnimation(exit, node),
               length: 0.8,
             }}
             entry={{
-              delay: 0.1,
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
+              length: 2,
             }}
             to="/kontakt"
           >

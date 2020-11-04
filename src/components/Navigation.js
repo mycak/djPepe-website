@@ -21,6 +21,7 @@ const NavigationStyles = styled.div`
     text-align: center;
   }
   li {
+    opacity: 0;
     width: 10%;
     &:nth-child(1) {
       width: 15%;
@@ -41,9 +42,9 @@ const Navigation = () => {
 
   useEffect(() => {
     const tl = gsap.timeline()
-    tl.from(nav.current.children, {
-      opacity: 0,
-      delay: 2.8,
+    tl.to(nav.current.children, {
+      opacity: 1,
+      delay: 2.5,
       duration: 0.8,
       stagger: 0.3,
     })
@@ -52,10 +53,10 @@ const Navigation = () => {
     <NavigationStyles>
       <ul ref={nav}>
         <li>
-          <Link to="/dj-Pepe">Dj Pepe </Link>
+          <Link to="/">Dj Pepe </Link>
         </li>
         <li>
-          <Link to="/o-mnie">O mnie</Link>
+          <Link to="/omnie">O mnie</Link>
         </li>
         <li>
           <Link to="/oferta">Oferta</Link>

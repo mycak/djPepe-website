@@ -7,6 +7,7 @@ import heroImage from '../assets/images/hero.jpg'
 gsap.registerPlugin(ScrollTrigger)
 
 const HeroStyles = styled.div`
+  opacity: 0;
   width: 100%;
   height: 100vh;
   background-image: url(${heroImage});
@@ -37,23 +38,25 @@ const Hero = () => {
   const heroContainer = useRef(null)
 
   useEffect(() => {
-    gsap.to(heroContainer.current, {
-      y: 120,
-      ease: 'none',
-      opacity: 0,
-      scrollTrigger: {
-        trigger: heroContainer.current,
-        start: 'top top',
-        end: 'bottom 10%',
-        scrub: true,
-        toggleActions: 'play none none none',
-        duration: 2,
-      },
-    })
+    const addScrollTrigger = () => {
+      gsap.to(heroContainer.current, {
+        y: 120,
+        ease: 'none',
+        opacity: 0,
+        scrollTrigger: {
+          trigger: heroContainer.current,
+          start: 'top top',
+          end: 'bottom 10%',
+          scrub: true,
+          toggleActions: 'play none none none',
+          duration: 2,
+        },
+      })
+    }
 
     const tl = gsap.timeline()
-    tl.from(heroContainer.current, {
-      opacity: 0,
+    tl.to(heroContainer.current, {
+      opacity: 1,
       delay: 0.7,
       duration: 2,
     })
@@ -61,6 +64,7 @@ const Hero = () => {
       opacity: 0,
       y: '-=20',
       duration: 0.7,
+      onComplete: addScrollTrigger,
     })
   }, [])
 

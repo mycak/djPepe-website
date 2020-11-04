@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 import { gsap } from 'gsap'
+import { TransitionLink } from 'gatsby-plugin-transition-link/components/TransitionLink'
 
 const NavigationStyles = styled.div`
   position: fixed;
@@ -39,7 +39,10 @@ const NavigationStyles = styled.div`
 
 const Navigation = () => {
   const nav = useRef(null)
-
+  const interestingExitAnimation = (exit, node) => {
+    // do some animation here
+    console.log(exit, node)
+  }
   useEffect(() => {
     const tl = gsap.timeline()
     tl.to(nav.current.children, {
@@ -53,16 +56,27 @@ const Navigation = () => {
     <NavigationStyles>
       <ul ref={nav}>
         <li>
-          <Link to="/">Dj Pepe </Link>
+          <TransitionLink to="/">Dj Pepe </TransitionLink>
         </li>
         <li>
-          <Link to="/omnie">O mnie</Link>
+          <TransitionLink to="/omnie">O mnie</TransitionLink>
         </li>
         <li>
-          <Link to="/oferta">Oferta</Link>
+          <TransitionLink
+            exit={{
+              trigger: ({ exit, node }) => interestingExitAnimation(exit, node),
+              length: 1,
+            }}
+            entry={{
+              delay: 1,
+            }}
+            to="/oferta"
+          >
+            Oferta
+          </TransitionLink>
         </li>
         <li>
-          <Link to="/kontakt">Kontakt</Link>
+          <TransitionLink to="/kontakt">Kontakt</TransitionLink>
         </li>
       </ul>
     </NavigationStyles>

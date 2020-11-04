@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import Navigation from './Navigation'
+import Navigation from './Nav/Navigation'
 import Footer from './Footer'
 import 'normalize.css'
 import GlobalStyles from '../styles/GlobalStyles'
+import Loader from './Nav/Loader'
 
 const ContentStyles = styled.div`
   width: 100%;
@@ -13,6 +14,7 @@ const Layout = ({ children }) => (
   <>
     <GlobalStyles />
     <Navigation />
+    <Loader />
     <ContentStyles>{children}</ContentStyles>
     <Footer />
   </>

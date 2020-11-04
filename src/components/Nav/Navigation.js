@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { gsap } from 'gsap'
+
 import { TransitionLink } from 'gatsby-plugin-transition-link/components/TransitionLink'
+import loaderAnimation from './loaderAnimation'
 
 const NavigationStyles = styled.div`
   position: fixed;
@@ -26,7 +28,10 @@ const NavigationStyles = styled.div`
     &:nth-child(1) {
       width: 15%;
       margin-right: auto;
-      visibility: hidden;
+      transition: all 1s;
+    }
+    &:nth-child(1) a.active {
+      opacity: 0;
     }
   }
 
@@ -39,10 +44,7 @@ const NavigationStyles = styled.div`
 
 const Navigation = () => {
   const nav = useRef(null)
-  const interestingExitAnimation = (exit, node) => {
-    // do some animation here
-    console.log(exit, node)
-  }
+
   useEffect(() => {
     const tl = gsap.timeline()
     tl.to(nav.current.children, {
@@ -56,19 +58,42 @@ const Navigation = () => {
     <NavigationStyles>
       <ul ref={nav}>
         <li>
-          <TransitionLink to="/">Dj Pepe </TransitionLink>
-        </li>
-        <li>
-          <TransitionLink to="/omnie">O mnie</TransitionLink>
+          <TransitionLink
+            exit={{
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
+              length: 0.8,
+            }}
+            entry={{
+              delay: 0.1,
+            }}
+            activeClassName="active"
+            to="/"
+          >
+            Dj Pepe{' '}
+          </TransitionLink>
         </li>
         <li>
           <TransitionLink
             exit={{
-              trigger: ({ exit, node }) => interestingExitAnimation(exit, node),
-              length: 1,
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
+              length: 0.8,
             }}
             entry={{
-              delay: 1,
+              delay: 0.1,
+            }}
+            to="/omnie"
+          >
+            O mnie
+          </TransitionLink>
+        </li>
+        <li>
+          <TransitionLink
+            exit={{
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
+              length: 0.8,
+            }}
+            entry={{
+              delay: 0.1,
             }}
             to="/oferta"
           >
@@ -76,7 +101,18 @@ const Navigation = () => {
           </TransitionLink>
         </li>
         <li>
-          <TransitionLink to="/kontakt">Kontakt</TransitionLink>
+          <TransitionLink
+            exit={{
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
+              length: 0.8,
+            }}
+            entry={{
+              delay: 0.1,
+            }}
+            to="/kontakt"
+          >
+            Kontakt
+          </TransitionLink>
         </li>
       </ul>
     </NavigationStyles>

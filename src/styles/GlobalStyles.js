@@ -24,6 +24,26 @@ const GlobalStyles = createGlobalStyle`
     height: 100%;
     display: flex;
     flex-direction: column;
+    &:before,&:after{
+    content: '';
+    height: 50vh;
+    width:100%;
+    position:fixed;
+    left:0;
+    background: #201b18;
+    z-index:2;
+    }
+    &:before{
+      top: 0;
+      transform: translateY(-100%);
+    }
+    &:after{
+      bottom: 0;
+      transform: translateY(100%);
+    }
+  }
+  .loader--opacity {
+    opacity: 0;
   }
 `
 export default GlobalStyles

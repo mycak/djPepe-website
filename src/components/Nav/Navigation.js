@@ -13,11 +13,12 @@ const NavigationStyles = styled.div`
   left: 0;
   top: 0;
   width: 100%;
+  min-height: 4vh;
   ul {
     margin: 5px;
     padding: 0;
     max-width: 100%;
-    min-height: 5vh;
+    min-height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -27,6 +28,7 @@ const NavigationStyles = styled.div`
   li {
     opacity: 0;
     width: 10%;
+    height: 100%;
     &:nth-child(1) {
       width: 15%;
       margin-right: auto;

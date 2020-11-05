@@ -1,9 +1,11 @@
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { gsap } from 'gsap'
-
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { TransitionLink } from 'gatsby-plugin-transition-link/components/TransitionLink'
 import loaderAnimation from './loaderAnimation'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const NavigationStyles = styled.div`
   position: fixed;
@@ -48,19 +50,30 @@ const NavigationStyles = styled.div`
 
 const Navigation = () => {
   const nav = useRef(null)
+  const navList = useRef(null)
 
   useEffect(() => {
     const tl = gsap.timeline()
-    tl.to(nav.current.children, {
+    tl.to(navList.current.children, {
       opacity: 1,
       delay: 2.5,
       duration: 0.8,
       stagger: 0.3,
     })
+    gsap.to(nav.current, {
+      backgroundColor: '#000000',
+      scrollTrigger: {
+        trigger: 'body',
+        start: '200 top',
+        end: '400 top',
+        scrub: true,
+      },
+    })
   }, [])
+
   return (
-    <NavigationStyles>
-      <ul ref={nav}>
+    <NavigationStyles ref={nav}>
+      <ul ref={navList}>
         <li>
           <TransitionLink
             exit={{

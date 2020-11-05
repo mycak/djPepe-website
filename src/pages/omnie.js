@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import SEO from './SEO'
+import Footer from '../components/Footer'
 
 const AboutMeStyles = styled.div`
   min-height: 100vh;
@@ -14,6 +15,7 @@ const omnie = () => (
     <SEO />
     <AboutMeStyles>
       <h2>O mnie</h2>
+      <Footer />
     </AboutMeStyles>
   </>
 )

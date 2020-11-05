@@ -1,8 +1,10 @@
 import { Link } from 'gatsby'
-import React from 'react'
+import gsap from 'gsap/gsap-core'
+import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 const FooterStyles = styled.div`
+  opacity: 0;
   width: 100%;
   min-height: 4vh;
   ul {
@@ -38,20 +40,32 @@ const FooterStyles = styled.div`
   }
 `
 
-const Footer = () => (
-  <FooterStyles>
-    <ul>
-      <li>
-        <Link to="">Powered by Piotr Myszkiewicz</Link>
-      </li>
-      <li>
-        <Link to="">Facebook</Link>
-      </li>
-      <li>
-        <Link to="">Instagram</Link>
-      </li>
-    </ul>
-  </FooterStyles>
-)
+const Footer = () => {
+  const footer = useRef(null)
+  useEffect(() => {
+    const tl = gsap.timeline()
+    tl.to(footer.current, {
+      opacity: 1,
+      delay: 2,
+      duration: 2,
+    })
+  })
+
+  return (
+    <FooterStyles ref={footer}>
+      <ul>
+        <li>
+          <Link to="">Powered by Piotr Myszkiewicz</Link>
+        </li>
+        <li>
+          <Link to="">Facebook</Link>
+        </li>
+        <li>
+          <Link to="">Instagram</Link>
+        </li>
+      </ul>
+    </FooterStyles>
+  )
+}
 
 export default Footer

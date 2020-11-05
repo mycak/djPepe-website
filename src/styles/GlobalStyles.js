@@ -17,7 +17,10 @@ const GlobalStyles = createGlobalStyle`
     background: #000000;
     width: 100%;
     height: 100%;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
   }
+  html::-webkit-scrollbar { width: 0 !important }
   body {
     font-size: 2rem;
     width: 100%;

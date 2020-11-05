@@ -31,7 +31,7 @@ const LoaderStyles = styled.div`
     display: inline-block;
     /* float: left; */
     margin-left: 2px;
-    animation: delay 0.8s infinite ease-in-out;
+    animation: delay 0.9s infinite ease-in-out;
   }
 
   .bar1 {

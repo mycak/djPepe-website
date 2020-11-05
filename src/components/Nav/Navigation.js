@@ -28,10 +28,14 @@ const NavigationStyles = styled.div`
     &:nth-child(1) {
       width: 15%;
       margin-right: auto;
-      transition: all 1s;
+      transition: all 1s ease 1s;
+    }
+    &:nth-child(1) a {
+      transition: all 1s ease 1s;
     }
     &:nth-child(1) a.active {
       opacity: 0;
+      transition: all 1s ease 1s;
     }
   }
 
@@ -60,11 +64,12 @@ const Navigation = () => {
         <li>
           <TransitionLink
             exit={{
-              length: 0.8,
+              length: 0,
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
             }}
             entry={{
-              trigger: ({ exit, node }) => loaderAnimation(exit, node),
-              length: 4,
+              delay: 2,
+              length: 1,
             }}
             activeClassName="active"
             to="/"
@@ -75,11 +80,12 @@ const Navigation = () => {
         <li>
           <TransitionLink
             exit={{
-              length: 0.8,
+              length: 0,
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
             }}
             entry={{
-              trigger: ({ exit, node }) => loaderAnimation(exit, node),
-              length: 2,
+              delay: 2,
+              length: 1,
             }}
             to="/omnie"
           >
@@ -89,11 +95,12 @@ const Navigation = () => {
         <li>
           <TransitionLink
             exit={{
-              length: 0.8,
+              length: 0,
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
             }}
             entry={{
-              trigger: ({ exit, node }) => loaderAnimation(exit, node),
-              length: 2,
+              delay: 2,
+              length: 1,
             }}
             to="/oferta"
           >
@@ -103,11 +110,12 @@ const Navigation = () => {
         <li>
           <TransitionLink
             exit={{
-              length: 0.8,
+              length: 0,
+              trigger: ({ exit, node }) => loaderAnimation(exit, node),
             }}
             entry={{
-              trigger: ({ exit, node }) => loaderAnimation(exit, node),
-              length: 2,
+              delay: 2,
+              length: 1,
             }}
             to="/kontakt"
           >

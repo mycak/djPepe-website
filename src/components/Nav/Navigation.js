@@ -49,7 +49,6 @@ const NavigationStyles = styled.div`
     font-size: clamp(10px, 2vw, 20px);
   }
 `
-
 const Navigation = () => {
   const nav = useRef(null)
   const navList = useRef(null)
@@ -65,16 +64,15 @@ const Navigation = () => {
     gsap.to(nav.current, {
       backgroundColor: '#000000',
       scrollTrigger: {
-        trigger: 'body',
-        start: '200 top',
-        end: '400 top',
+        start: '200',
+        end: '400',
         scrub: true,
       },
     })
   }, [])
 
   return (
-    <NavigationStyles ref={nav}>
+    <NavigationStyles ref={nav} className="nav">
       <ul ref={navList}>
         <li>
           <TransitionLink

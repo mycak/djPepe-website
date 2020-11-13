@@ -2,8 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Footer from '../components/Footer'
-import Hero from '../components/Hero'
-import News from '../components/News'
+import Hero from '../components/Homepage/Hero'
+import News from '../components/Homepage/News'
 import SEO from './SEO'
 
 const HomePageStyles = styled.div`
@@ -24,11 +24,10 @@ const HomePageStyles = styled.div`
 `
 
 export default function HomePage({ data }) {
-  console.log(data)
   return (
     <>
       <SEO />
-      <HomePageStyles>
+      <HomePageStyles className="section">
         <Hero />
         <h2>Aktualności</h2>
         <News

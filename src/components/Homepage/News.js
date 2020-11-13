@@ -55,8 +55,8 @@ const News = ({ dataImage, order, title, date }) => {
       opacity: 0,
       scrollTrigger: {
         trigger: news.current,
-        start: '20% bottom',
-        end: '100% bottom',
+        start: '30% bottom',
+        end: '120% bottom',
         scrub: true,
         stagger: 2,
       },

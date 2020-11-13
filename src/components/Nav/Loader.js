@@ -19,7 +19,7 @@ const LoaderStyles = styled.div`
   height: 50px;
   text-align: center;
   font-size: 10px;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
@@ -31,11 +31,12 @@ const LoaderStyles = styled.div`
     display: inline-block;
     /* float: left; */
     margin-left: 2px;
-    animation: delay 0.9s infinite ease-in-out;
+    animation: delay 1.3s infinite ease-in-out;
   }
 
   .bar1 {
     background-color: #754fa0;
+    animation-delay: -0.9s;
   }
   .bar2 {
     background-color: #09b7bf;

@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import heroImage from '../assets/images/hero.jpg'
+import heroImage from '../../assets/images/hero.jpg'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -40,7 +40,7 @@ const Hero = () => {
   useEffect(() => {
     const addScrollTrigger = () => {
       gsap.to(heroContainer.current, {
-        y: 120,
+        y: 130,
         ease: 'none',
         opacity: 0,
         scrollTrigger: {
@@ -57,13 +57,13 @@ const Hero = () => {
     const tl = gsap.timeline()
     tl.to(heroContainer.current, {
       opacity: 1,
-      delay: 0.7,
-      duration: 2,
+      delay: 0.2,
+      duration: 1.5,
     })
     tl.from(header.current, {
       opacity: 0,
       y: '-=20',
-      duration: 0.7,
+      duration: 0.5,
       onComplete: addScrollTrigger,
     })
   }, [])

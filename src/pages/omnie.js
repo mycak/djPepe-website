@@ -2,19 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import SEO from './SEO'
 import Footer from '../components/Footer'
+import Header from '../components/Omnie/Header'
 
 const AboutMeStyles = styled.div`
-  min-height: 100vh;
+  height: 100%;
   text-align: center;
-  h2 {
-    margin-top: 5em;
-  }
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 const omnie = () => (
   <>
     <SEO />
     <AboutMeStyles>
-      <h2>O mnie</h2>
+      <Header />
       <Footer />
     </AboutMeStyles>
   </>

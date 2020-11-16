@@ -3,10 +3,12 @@ import gsap from 'gsap'
 import styled from 'styled-components'
 
 const TitleStyles = styled.div`
-  opacity: 0;
   text-align: left;
   margin-top: 4em;
   margin-bottom: 2em;
+  .word--container {
+    opacity: 0;
+  }
   .word--container p {
     margin: 0;
     font-size: clamp(16px, 6vw, 6rem);
@@ -26,21 +28,22 @@ const Title = () => {
 
   useEffect(() => {
     const tl = gsap.timeline()
-    tl.to(title.current, {
+    tl.to(title.current.children, {
+      x: '+= 10',
       opacity: 1,
-      delay: 1,
+      delay: 0.5,
       duration: 1,
-      stagger: 2,
+      stagger: 0.5,
     })
   }, [])
 
   return (
     <TitleStyles ref={title}>
       <div className="word--container word--1">
-        <p>Profesjonalizm</p>
+        <p>Profesjonalizm,</p>
       </div>
       <div className="word--container word--2">
-        <p>Jakość</p>
+        <p>Jakość,</p>
       </div>
       <div className="word--container word--3">
         <p>Pasja</p>

@@ -1,4 +1,3 @@
-import { Link } from 'gatsby'
 import gsap from 'gsap/gsap-core'
 import React, { useEffect, useRef } from 'react'
 import styled from 'styled-components'
@@ -22,6 +21,7 @@ const FooterStyles = styled.div`
   a {
     text-decoration: none;
     color: #ced4da;
+    cursor: pointer;
   }
   li {
     margin-bottom: 5px;
@@ -55,13 +55,13 @@ const Footer = () => {
     <FooterStyles ref={footer}>
       <ul>
         <li>
-          <Link to="">Powered by Piotr Myszkiewicz</Link>
+          <a to="">Powered by Piotr Myszkiewicz</a>
         </li>
         <li>
-          <Link to="">Facebook</Link>
+          <a to="">Facebook</a>
         </li>
         <li>
-          <Link to="">Instagram</Link>
+          <a to="">Instagram</a>
         </li>
       </ul>
     </FooterStyles>

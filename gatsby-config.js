@@ -11,7 +11,12 @@ module.exports = {
     'gatsby-plugin-styled-components',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-transition-link`,
+    {
+      resolve: `gatsby-plugin-transition-link`,
+      options: {
+        layout: require.resolve(`./src/components/Layout.js`),
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

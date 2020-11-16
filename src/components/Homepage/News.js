@@ -11,10 +11,10 @@ const NewsStyles = styled.div`
   margin-left: auto;
   margin-right: auto;
   height: 100%;
-  font-size: clamp(8px, 1.6vw, 18px);
+  font-size: clamp(8px, 1.3vw, 18px);
   align-items: center;
   justify-items: center;
-  width: 90%;
+  width: 70%;
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
@@ -38,13 +38,16 @@ const NewsStyles = styled.div`
     height: auto;
   }
   p {
+    text-align: ${props => props.order[2]};
     color: #ced4da;
     width: 100%;
   }
 `
 
 const News = ({ dataImage, order, title, date }) => {
-  const grid = order ? ['2 / 1 / 3 / 2', 'start'] : ['2 / 2 / 3 / 3', 'end']
+  const grid = order
+    ? ['2 / 1 / 3 / 2', 'start', 'left']
+    : ['2 / 2 / 3 / 3', 'end', 'right']
   const news = useRef(null)
   const newsTitle = useRef(null)
   const newsImage = useRef(null)

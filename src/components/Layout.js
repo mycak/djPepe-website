@@ -8,20 +8,18 @@ import { addSmoothScroll } from '../utilis/addSmoothScroll'
 
 const ContentStyles = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 `
-const Layout = ({ children }) => {
-  useEffect(() => {
-    addSmoothScroll()
-  })
-  return (
-    <>
-      <GlobalStyles />
-      <Navigation />
-      <Loader />
-      <ContentStyles className="scroller">{children}</ContentStyles>
-    </>
-  )
-}
+const Layout = ({ children }) => (
+  // useEffect(() => {
+  //   addSmoothScroll()
+  // })
+  <>
+    <GlobalStyles />
+    <Navigation />
+    <Loader />
+    <ContentStyles className="scroller">{children}</ContentStyles>
+  </>
+)
 
 export default Layout

@@ -41,6 +41,9 @@ const NavigationStyles = styled.div`
       opacity: 0;
       transition: all 1s ease 1s;
     }
+    @media (max-width: 1000px) {
+      width: 13%;
+    }
   }
 
   a {

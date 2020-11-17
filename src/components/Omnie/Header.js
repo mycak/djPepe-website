@@ -5,6 +5,7 @@ import Title from './Title'
 
 const HeaderStyles = styled.div`
   width: 100%;
+  min-height: 100vh;
   .header--text {
     display: flex;
     flex-direction: row;

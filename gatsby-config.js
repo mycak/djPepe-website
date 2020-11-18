@@ -12,6 +12,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-modal-routing`,
+      options: {
+        appElement: '#___gatsby',
+        modalProps: {},
+      },
+    },
+    {
       resolve: `gatsby-plugin-transition-link`,
       options: {
         layout: require.resolve(`./src/components/Layout.js`),

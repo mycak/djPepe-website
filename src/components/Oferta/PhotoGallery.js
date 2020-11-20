@@ -13,7 +13,7 @@ const PhotosGrid = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(3, minmax(20px, 0.6fr));
-  grid-template-rows: repeat(auto-fit, minmax(20px, 200px));
+  grid-template-rows: repeat(auto-fit, minmax(20px, 0.6fr));
   .image--container {
     opacity: 0;
     width: 100%;

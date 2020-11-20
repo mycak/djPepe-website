@@ -3,8 +3,12 @@ import gsap from 'gsap'
 import styled from 'styled-components'
 
 const TitleStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 40vh;
   text-align: left;
-  margin-top: 4em;
+  margin-top: 6em;
   margin-bottom: 2em;
   .word--container {
     opacity: 0;

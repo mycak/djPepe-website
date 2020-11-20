@@ -18,6 +18,15 @@ const QuoteStyles = styled.div`
     word-spacing: 0px;
     color: #adb5bd;
   }
+  @media (max-width: 1100px) {
+    margin-bottom: 4em;
+  }
+  @media (max-width: 800px) {
+    margin-bottom: 6em;
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 8em;
+  }
 `
 const Quote = () => {
   const quote = useRef(null)

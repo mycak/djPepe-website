@@ -42,6 +42,25 @@ const MainStyles = styled.div`
   .card--3 p {
     text-align: right;
   }
+  @media (max-width: 750px) {
+    .history--card {
+      width: 60%;
+    }
+    .card--1 {
+      margin-left: 25%;
+    }
+  }
+  @media (max-width: 620px) {
+    .history--card {
+      width: 80%;
+    }
+    .card--1 {
+      margin-left: 15%;
+    }
+    .card--3 {
+      margin-left: 10%;
+    }
+  }
 `
 const CardsList = ({ imageData }) => {
   const textContainer = useRef(null)

@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Navigation from './Nav/Navigation'
 import 'normalize.css'
 import GlobalStyles from '../styles/GlobalStyles'
 import Loader from './Nav/Loader'
-import { addSmoothScroll } from '../utilis/addSmoothScroll'
 
 const ContentStyles = styled.div`
   width: 100%;
@@ -21,5 +20,4 @@ const Layout = ({ children }) => (
     <ContentStyles className="scroller">{children}</ContentStyles>
   </>
 )
-
 export default Layout

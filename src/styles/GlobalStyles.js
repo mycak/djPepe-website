@@ -34,7 +34,6 @@ const GlobalStyles = createGlobalStyle`
     position:fixed;
     left:0;
     background: #201b18;
-    z-index:200;
     }
     &:before{
       top: 0;

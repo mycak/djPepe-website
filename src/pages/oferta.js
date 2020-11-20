@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql } from 'gatsby'
+
 import SEO from './SEO'
 import Footer from '../components/Footer'
 import Description from '../components/Oferta/Description'
@@ -14,12 +15,17 @@ const OfferStyles = styled.div`
   .content--container {
     display: flex;
     flex-direction: row;
+    margin-bottom: 2em;
   }
   .leftside--container {
+    max-height: 100%;
     width: 40%;
+    display: flex;
+    flex-direction: column;
   }
 `
-const oferta = ({ data }) => (
+const Oferta = ({ data }) => (
+  // console.log(data)
   <>
     <SEO />
     <OfferStyles>
@@ -100,7 +106,56 @@ export const query = graphql`
         }
       }
     }
+    image10: file(relativePath: { eq: "gal1.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image11: file(relativePath: { eq: "gal2.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image12: file(relativePath: { eq: "gal3.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image13: file(relativePath: { eq: "gal4.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image14: file(relativePath: { eq: "gal5.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image15: file(relativePath: { eq: "gal6.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    image16: file(relativePath: { eq: "gal7.jpg" }) {
+      childImageSharp {
+        fluid(maxHeight: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
   }
 `
 
-export default oferta
+export default Oferta

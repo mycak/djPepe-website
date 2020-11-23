@@ -2,19 +2,34 @@ import React from 'react'
 import styled from 'styled-components'
 import SEO from './SEO'
 import Footer from '../components/Footer'
+import contactImage from '../assets/images/contact.jpeg'
+import Socials from '../components/Kontakt/Socials'
+import ContactForm from '../components/Kontakt/ContactForm'
 
 const ContactStyles = styled.div`
-  min-height: 100vh;
+  height: 100vh;
   text-align: center;
-  h2 {
-    margin-top: 5em;
-  }
+`
+const MainContainer = styled.div`
+  height: 95.5vh;
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    ),
+    url(${contactImage});
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
 `
 const Kontakt = () => (
   <>
     <SEO />
     <ContactStyles>
-      <h2>Kontakt</h2>
+      <MainContainer>
+        <Socials />
+        <ContactForm />
+      </MainContainer>
       <Footer />
     </ContactStyles>
   </>

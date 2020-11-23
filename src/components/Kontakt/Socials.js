@@ -38,12 +38,17 @@ const SocialsStyles = styled.div`
     font-size: clamp(2em, 6vw, 5em);
     margin-bottom: 1rem;
   }
+  @media (max-width: 900px) {
+    .socialIcons--container {
+      width: 50%;
+    }
+  }
 `
 
 const Socials = () => (
   <SocialsStyles>
     <p className="pseudonym">Dj Pepe</p>
-    <p className="name">Piotr Pieńkowki</p>
+    <p className="name">Piotr Pińkowki</p>
     <a href="tel:795 216 534" className="phone">
       +48 795 216 534
     </a>
@@ -52,13 +57,13 @@ const Socials = () => (
     </a>
     <div className="socialIcons--container">
       <div className="icon--container">
-        <a href="your link here">
+        <a href="https://www.facebook.com/dj.pepe.982">
           {' '}
           <AiFillFacebook />
         </a>
       </div>
       <div className="icon--container">
-        <a href="your link here">
+        <a href="https://www.instagram.com/eltoro.music/">
           {' '}
           <AiFillInstagram />
         </a>

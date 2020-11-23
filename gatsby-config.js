@@ -11,13 +11,6 @@ module.exports = {
     'gatsby-plugin-styled-components',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-modal-routing`,
-    //   options: {
-    //     appElement: '#___gatsby',
-    //     modalProps: {},
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-transition-link`,
       options: {

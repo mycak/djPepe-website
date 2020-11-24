@@ -59,7 +59,7 @@ const Socials = () => {
   })
   return (
     <SocialsStyles ref={links}>
-      <p className="pseudonym">Dj Pepe</p>
+      <p className="pseudonym">El Toro</p>
       <p className="name">Piotr Pińkowki</p>
       <a href="tel:795 216 534" className="phone">
         +48 795 216 534

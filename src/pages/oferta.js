@@ -25,7 +25,6 @@ const OfferStyles = styled.div`
   }
 `
 const Oferta = ({ data }) => (
-  // console.log(data)
   <>
     <SEO />
     <OfferStyles>

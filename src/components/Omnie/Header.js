@@ -5,6 +5,7 @@ import Title from './Title'
 import contactImage from '../../assets/images/bg1.jpeg'
 
 const HeaderStyles = styled.div`
+  opacity: 0;
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(
@@ -13,6 +14,7 @@ const HeaderStyles = styled.div`
       rgba(0, 0, 0, 0) 62%,
       rgba(0, 0, 0, 1) 89%
     ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 79%, rgba(0, 0, 0, 1) 96%),
     url(${contactImage});
   background-size: cover;
   .header--text {
@@ -44,17 +46,23 @@ const HeaderStyles = styled.div`
 `
 const Header = () => {
   const quote = useRef(null)
+  const bg = useRef(null)
 
   useEffect(() => {
     const tl = gsap.timeline()
-    tl.to(quote.current, {
+    tl.to(bg.current, {
       opacity: 1,
-      delay: 2.3,
+      delay: 0.5,
+      duration: 0.8,
+    })
+    tl.to(quote.current, {
+      delay: 1.5,
+      opacity: 1,
       duration: 1,
     })
   }, [])
   return (
-    <HeaderStyles>
+    <HeaderStyles ref={bg}>
       <Title />
       <div className="header--text">
         <h2>O mnie</h2>

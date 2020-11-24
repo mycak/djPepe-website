@@ -35,7 +35,7 @@ const Title = () => {
     tl.to(title.current.children, {
       x: '+= 10',
       opacity: 1,
-      delay: 0.5,
+      delay: 1.2,
       duration: 1,
       stagger: 0.5,
     })

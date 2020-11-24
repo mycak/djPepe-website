@@ -4,6 +4,7 @@ import gsap from 'gsap'
 
 const DescriptionStyles = styled.div`
   width: 100%;
+  min-height: 90vh;
   h2 {
     text-align: center;
     margin-top: 4em;

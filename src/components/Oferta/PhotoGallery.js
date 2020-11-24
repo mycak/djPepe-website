@@ -13,7 +13,7 @@ const PhotosGrid = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: repeat(3, minmax(20px, 0.6fr));
-  grid-template-rows: repeat(auto-fit, minmax(20px, 0.6fr));
+  grid-auto-rows: minmax(100px, 1fr);
   .image--container {
     opacity: 0;
     width: 100%;
@@ -70,7 +70,7 @@ const PhotoGallery = ({ imageData }) => {
           <Img
             fluid={imageData[key].childImageSharp.fluid}
             data-id={i}
-            style={{ height: '100%', width: '100%' }}
+            style={{ minHeight: '100%', width: '100%' }}
             imgStyle={{ objectFit: 'cover', transition: 'all .2s' }}
           />
         </div>

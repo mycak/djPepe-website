@@ -4,10 +4,18 @@ import Img from 'gatsby-image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Quote from './Quote'
+import contactImage from '../../assets/images/bg2.jpeg'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const MainStyles = styled.div`
+  background: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 0.4) 3%,
+      rgba(0, 0, 0, 1) 90%
+    ),
+    url(${contactImage});
+  background-size: cover;
   font-size: clamp(10px, 1.3vw, 18px);
   min-height: 100vh;
   .image--container {

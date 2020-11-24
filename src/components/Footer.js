@@ -24,7 +24,7 @@ const FooterStyles = styled.div`
     cursor: pointer;
   }
   li {
-    margin-bottom: 5px;
+    margin-bottom: 0;
     width: 15%;
     font-size: clamp(10px, 1.4vw, 20px);
     margin-right: 1em;

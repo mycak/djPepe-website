@@ -6,11 +6,11 @@ const FormStyles = styled.div`
   height: 100%;
   form {
     padding-right: 2em;
-    margin-top: 2em;
+    margin-top: 1em;
     height: 80%;
     p {
       font-size: clamp(16px, 3vw, 3em);
-      margin-bottom: 0.5em;
+      margin-bottom: 1em;
     }
   }
   fieldset {
@@ -30,11 +30,13 @@ const FormStyles = styled.div`
     width: 100%;
     margin-top: 0.5em;
     outline: none;
+    border: 1px solid #ccc;
     background-color: rgba(96, 96, 96, 0.5);
     color: #fff;
   }
   textarea[type='text'] {
     margin-top: 0.5em;
+    border: 1px solid #ccc;
     min-width: 100%;
     min-height: 30vh;
     outline: none;
@@ -52,7 +54,7 @@ const ContactForm = () => (
         <p>Zapytaj o ofertę !</p>
         <label htmlFor="email">
           E-mail:
-          <input type="text" id="email" name="email" />
+          <input type="text" id="email" name="email" placeholder="Email..." />
         </label>
         <label htmlFor="message">
           Wiadomość:

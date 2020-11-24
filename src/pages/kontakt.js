@@ -13,9 +13,9 @@ const ContactStyles = styled.div`
 const MainContainer = styled.div`
   height: 95.5vh;
   background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0.7) 100%
+      -45deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 1) 61%
     ),
     url(${contactImage});
   background-size: cover;

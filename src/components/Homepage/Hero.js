@@ -72,7 +72,7 @@ const Hero = () => {
     <HeroStyles ref={heroContainer}>
       <div className="background--layer">
         <h1 ref={header}>
-          Dj Pepe <span className="postscript">artysta</span>
+          El Toro <span className="postscript">muzyk</span>
         </h1>
       </div>
     </HeroStyles>

@@ -2,10 +2,19 @@ import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import styled from 'styled-components'
 import Title from './Title'
+import contactImage from '../../assets/images/bg1.jpeg'
 
 const HeaderStyles = styled.div`
   width: 100%;
   min-height: 100vh;
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 1) 37%,
+      rgba(0, 0, 0, 0) 62%,
+      rgba(0, 0, 0, 1) 89%
+    ),
+    url(${contactImage});
+  background-size: cover;
   .header--text {
     display: flex;
     flex-direction: row;

@@ -60,7 +60,7 @@ const Navigation = () => {
     const tl = gsap.timeline()
     tl.to(navList.current.children, {
       opacity: 1,
-      delay: 0.5,
+      delay: 2,
       duration: 0.8,
       stagger: 0.3,
     })

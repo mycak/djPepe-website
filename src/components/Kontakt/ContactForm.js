@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap'
 import styled from 'styled-components'
 
 const FormStyles = styled.div`
@@ -14,6 +15,7 @@ const FormStyles = styled.div`
     }
   }
   fieldset {
+    opacity: 0;
     border: none;
     display: flex;
     flex-direction: column;
@@ -47,28 +49,39 @@ const FormStyles = styled.div`
     width: 20%;
   }
 `
-const ContactForm = () => (
-  <FormStyles>
-    <form>
-      <fieldset>
-        <p>Zapytaj o ofertę !</p>
-        <label htmlFor="email">
-          E-mail:
-          <input type="text" id="email" name="email" placeholder="Email..." />
-        </label>
-        <label htmlFor="message">
-          Wiadomość:
-          <textarea
-            type="text"
-            id="message"
-            name="message"
-            placeholder="Napisz coś.."
-          />
-        </label>
-        <input type="submit" value="Wyślij" />
-      </fieldset>
-    </form>
-  </FormStyles>
-)
+const ContactForm = () => {
+  const form = useRef(null)
+  useEffect(() => {
+    const tl = gsap.timeline()
+    tl.to(form.current, {
+      opacity: 1,
+      delay: 1.5,
+      duration: 0.8,
+    })
+  })
+  return (
+    <FormStyles>
+      <form>
+        <fieldset ref={form}>
+          <p>Zapytaj o ofertę !</p>
+          <label htmlFor="email">
+            E-mail:
+            <input type="text" id="email" name="email" placeholder="Email..." />
+          </label>
+          <label htmlFor="message">
+            Wiadomość:
+            <textarea
+              type="text"
+              id="message"
+              name="message"
+              placeholder="Napisz coś.."
+            />
+          </label>
+          <input type="submit" value="Wyślij" />
+        </fieldset>
+      </form>
+    </FormStyles>
+  )
+}
 
 export default ContactForm

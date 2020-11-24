@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import gsap from 'gsap'
 import styled from 'styled-components'
 import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai'
 
 const SocialsStyles = styled.div`
+  opacity: 0;
   flex: 1;
   height: 100%;
   display: flex;
@@ -45,31 +47,42 @@ const SocialsStyles = styled.div`
   }
 `
 
-const Socials = () => (
-  <SocialsStyles>
-    <p className="pseudonym">Dj Pepe</p>
-    <p className="name">Piotr Pińkowki</p>
-    <a href="tel:795 216 534" className="phone">
-      +48 795 216 534
-    </a>
-    <a href="mailto:DjPepe@gmail.com" className="mail">
-      DjPepe@gmail.com
-    </a>
-    <div className="socialIcons--container">
-      <div className="icon--container">
-        <a href="https://www.facebook.com/dj.pepe.982">
-          {' '}
-          <AiFillFacebook />
-        </a>
+const Socials = () => {
+  const links = useRef(null)
+  useEffect(() => {
+    const tl = gsap.timeline()
+    tl.to(links.current, {
+      opacity: 1,
+      delay: 1,
+      duration: 0.8,
+    })
+  })
+  return (
+    <SocialsStyles ref={links}>
+      <p className="pseudonym">Dj Pepe</p>
+      <p className="name">Piotr Pińkowki</p>
+      <a href="tel:795 216 534" className="phone">
+        +48 795 216 534
+      </a>
+      <a href="mailto:DjPepe@gmail.com" className="mail">
+        DjPepe@gmail.com
+      </a>
+      <div className="socialIcons--container">
+        <div className="icon--container">
+          <a href="https://www.facebook.com/dj.pepe.982">
+            {' '}
+            <AiFillFacebook />
+          </a>
+        </div>
+        <div className="icon--container">
+          <a href="https://www.instagram.com/eltoro.music/">
+            {' '}
+            <AiFillInstagram />
+          </a>
+        </div>
       </div>
-      <div className="icon--container">
-        <a href="https://www.instagram.com/eltoro.music/">
-          {' '}
-          <AiFillInstagram />
-        </a>
-      </div>
-    </div>
-  </SocialsStyles>
-)
+    </SocialsStyles>
+  )
+}
 
 export default Socials

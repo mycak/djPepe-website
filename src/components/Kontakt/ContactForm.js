@@ -4,11 +4,10 @@ import styled from 'styled-components'
 
 const FormStyles = styled.div`
   flex: 1;
-  height: 100%;
   form {
     padding-right: 2em;
     margin-top: 1em;
-    height: 80%;
+    height: 100%;
     p {
       font-size: clamp(16px, 3vw, 3em);
       margin-bottom: 1em;
@@ -40,13 +39,19 @@ const FormStyles = styled.div`
     margin-top: 0.5em;
     border: 1px solid #ccc;
     min-width: 100%;
-    min-height: 30vh;
+    min-height: 35vh;
     outline: none;
     background-color: rgba(96, 96, 96, 0.5);
     color: #fff;
+    @media (max-width: 1000px) {
+      min-height: 50vh;
+    }
   }
   input[type='submit'] {
     width: 20%;
+    @media (max-width: 1000px) {
+      width: 50%;
+    }
   }
 `
 const ContactForm = () => {

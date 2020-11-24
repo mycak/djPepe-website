@@ -6,7 +6,7 @@ const SEO = () => (
   <Helmet titleTemplate="Dj Pepe">
     <html lang="en" />
     <link rel="icon" href={favicon} />
-    <title>Dj Pepe</title>
+    <title>El Toro - artysta, muzyk - wesela, eventy</title>
   </Helmet>
 )
 

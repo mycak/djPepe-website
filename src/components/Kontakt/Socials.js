@@ -65,7 +65,7 @@ const Socials = () => {
         +48 795 216 534
       </a>
       <a href="mailto:DjPepe@gmail.com" className="mail">
-        DjPepe@gmail.com
+        ElToro@gmail.com
       </a>
       <div className="socialIcons--container">
         <div className="icon--container">

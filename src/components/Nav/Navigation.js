@@ -90,7 +90,7 @@ const Navigation = () => {
             activeClassName="active"
             to="/"
           >
-            Dj Pepe{' '}
+            El Toro{' '}
           </TransitionLink>
         </li>
         <li>

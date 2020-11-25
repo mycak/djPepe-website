@@ -5,7 +5,7 @@ import contactImage from '../../assets/images/contact.jpeg'
 
 const MainWrapper = styled.div`
   opacity: 0;
-  height: 95.5vh;
+  min-height: 95.5vh;
   background: linear-gradient(
       -45deg,
       rgba(0, 0, 0, 0.3) 0%,
@@ -15,6 +15,9 @@ const MainWrapper = styled.div`
   background-size: cover;
   display: flex;
   flex-direction: row;
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
 `
 const MainContainer = ({ children }) => {
   const bg = useRef(null)

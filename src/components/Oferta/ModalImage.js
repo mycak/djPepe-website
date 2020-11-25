@@ -19,8 +19,8 @@ const ModalImage = ({ isOpen, closeModal, currentImage, imageData }) => (
       },
       content: {
         backgroundColor: `rgba(0, 0, 0, 1)`,
-        minWidth: '85vh',
-        maxHeight: '85vh',
+        minWidth: '80vh',
+        maxHeight: '80vh',
         top: '50%',
         left: '50%',
         right: 'auto',

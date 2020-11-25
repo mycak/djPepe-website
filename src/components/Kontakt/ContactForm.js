@@ -12,6 +12,9 @@ const FormStyles = styled.div`
       font-size: clamp(16px, 3vw, 3em);
       margin-bottom: 1em;
     }
+    @media (max-width: 700px) {
+      padding-right: 0;
+    }
   }
   fieldset {
     opacity: 0;
@@ -20,6 +23,11 @@ const FormStyles = styled.div`
     flex-direction: column;
     align-items: center;
     height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    @media (max-width: 700px) {
+      width: 75%;
+    }
     label {
       font-size: clamp(10px, 1.4vw, 2em);
       text-align: left;
@@ -49,8 +57,13 @@ const FormStyles = styled.div`
   }
   input[type='submit'] {
     width: 20%;
+    font-size: clamp(14px, 2vw, 3em);
     @media (max-width: 1000px) {
       width: 50%;
+    }
+    @media (max-width: 700px) {
+      width: 30%;
+      margin-bottom: 2em;
     }
   }
 `

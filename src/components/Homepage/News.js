@@ -32,6 +32,9 @@ const NewsStyles = styled.div`
     grid-area: ${props => props.order[0]};
     min-width: 35vw;
     min-height: 50vh;
+    @media (max-width: 900px) {
+      min-height: 30vh;
+    }
   }
   .image--container img {
     max-width: 100%;

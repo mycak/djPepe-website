@@ -4,14 +4,13 @@ import gsap from 'gsap'
 
 const DescriptionStyles = styled.div`
   width: 100%;
-  min-height: 90vh;
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   h2 {
     text-align: center;
-    margin-top: 4em;
     font-size: clamp(16px, 3vw, 2em);
-    @media (max-width: 900px) {
-      margin-top: 4em;
-    }
   }
   p {
     color: #adb5bd;

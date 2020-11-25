@@ -7,7 +7,7 @@ import ContactForm from '../components/Kontakt/ContactForm'
 import MainContainer from '../components/Kontakt/MainContainer'
 
 const ContactStyles = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 `
 const Kontakt = () => (

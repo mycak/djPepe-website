@@ -6,11 +6,14 @@ import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai'
 const SocialsStyles = styled.div`
   opacity: 0;
   flex: 1;
-  height: 100%;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 700px) {
+    margin-top: 4em;
+  }
   a {
     text-decoration: none;
     color: #fff;
@@ -28,6 +31,9 @@ const SocialsStyles = styled.div`
     justify-content: space-around;
     width: 30%;
     margin-top: 1em;
+    @media (max-width: 700px) {
+      max-width: 30%;
+    }
   }
   .icon--container {
     width: 50%;

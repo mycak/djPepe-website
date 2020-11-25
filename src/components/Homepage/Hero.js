@@ -14,10 +14,19 @@ const HeroStyles = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  @media (max-width: 1100px) {
+    background-size: cover;
+  }
   h1 {
     padding-left: 5%;
     padding-top: 10%;
     font-size: clamp(1.5em, 5vw, 6em);
+    @media (max-width: 1000px) {
+      padding-top: 15%;
+    }
+    @media (max-width: 700px) {
+      padding-top: 30%;
+    }
   }
   .postscript {
     font-size: clamp(0.2em, 2vw, 6em);

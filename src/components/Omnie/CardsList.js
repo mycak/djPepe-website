@@ -22,6 +22,9 @@ const MainStyles = styled.div`
     margin: 1em;
     min-width: 30vw;
     min-height: 45vh;
+    @media (max-width: 750px) {
+      min-height: 5vh;
+    }
   }
   .image--container img {
     max-width: 100%;

@@ -15,13 +15,21 @@ const DescriptionStyles = styled.div`
     opacity: 1;
   }
   h2 {
+    opacity: 0;
     text-align: center;
     font-size: clamp(16px, 3vw, 2em);
+    @media (max-width: 700px) {
+      opacity: 1;
+    }
   }
   p {
+    opacity: 0;
     color: #adb5bd;
     font-size: clamp(10px, 1.5vw, 2em);
     padding: 2em;
+    @media (max-width: 700px) {
+      opacity: 1;
+    }
   }
   .highlight {
     color: #fff;
@@ -31,8 +39,8 @@ const Description = () => {
   const text = useRef(null)
   useEffect(() => {
     const tl = gsap.timeline()
-    tl.from(text.current.children, {
-      opacity: 0,
+    tl.to(text.current.children, {
+      opacity: 1,
       delay: 1,
       duration: 1,
       stagger: 0.5,

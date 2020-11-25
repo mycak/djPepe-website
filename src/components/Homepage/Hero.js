@@ -17,6 +17,7 @@ const HeroStyles = styled.div`
   @media (max-width: 1100px) {
     background-size: cover;
   }
+
   h1 {
     padding-left: 5%;
     padding-top: 10%;

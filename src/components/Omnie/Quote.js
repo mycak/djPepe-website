@@ -21,11 +21,9 @@ const QuoteStyles = styled.div`
   @media (max-width: 1100px) {
     margin-bottom: 4em;
   }
-  @media (max-width: 800px) {
-    margin-bottom: 6em;
-  }
-  @media (max-width: 600px) {
-    margin-bottom: 8em;
+  @media (max-width: 750px) {
+    margin-bottom: 2em;
+    margin-top: 3em;
   }
 `
 const Quote = () => {

@@ -22,10 +22,10 @@ const HeroStyles = styled.div`
     padding-top: 10%;
     font-size: clamp(1.5em, 5vw, 6em);
     @media (max-width: 1000px) {
-      padding-top: 15%;
+      padding-top: 20%;
     }
     @media (max-width: 700px) {
-      padding-top: 30%;
+      padding-top: 40%;
     }
   }
   .postscript {

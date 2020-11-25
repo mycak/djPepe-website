@@ -33,6 +33,9 @@ const MainStyles = styled.div`
     margin-bottom: 2em;
     display: flex;
     flex-direction: row;
+    @media (max-width: 750px) {
+      flex-direction: column;
+    }
   }
   .card--1 {
     margin-left: 35%;
@@ -52,21 +55,18 @@ const MainStyles = styled.div`
   }
   @media (max-width: 750px) {
     .history--card {
-      width: 60%;
-    }
-    .card--1 {
-      margin-left: 25%;
-    }
-  }
-  @media (max-width: 620px) {
-    .history--card {
       width: 80%;
-    }
-    .card--1 {
-      margin-left: 15%;
     }
     .card--3 {
       margin-left: 10%;
+    }
+    .card--1 {
+      margin-left: 10%;
+    }
+    .text--container {
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 `

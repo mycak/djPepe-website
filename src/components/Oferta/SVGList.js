@@ -36,6 +36,9 @@ const SVG = styled.div`
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(16deg)
       brightness(113%) contrast(101%);
   }
+  @media (max-width: 700px) {
+    opacity: 1;
+  }
 `
 
 const SVGList = () => {

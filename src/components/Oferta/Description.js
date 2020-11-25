@@ -12,6 +12,7 @@ const DescriptionStyles = styled.div`
     margin-top: 3em;
     min-height: 5vh;
     width: 95%;
+    opacity: 1;
   }
   h2 {
     text-align: center;

@@ -8,6 +8,11 @@ const DescriptionStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media (max-width: 700px) {
+    margin-top: 3em;
+    min-height: 5vh;
+    width: 80%;
+  }
   h2 {
     text-align: center;
     font-size: clamp(16px, 3vw, 2em);

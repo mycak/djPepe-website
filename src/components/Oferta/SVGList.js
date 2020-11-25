@@ -16,6 +16,9 @@ const SVGListStyles = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  @media (max-width: 700px) {
+    flex-direction: row;
+  }
 `
 const SVG = styled.div`
   opacity: 0;

@@ -24,8 +24,15 @@ const PhotosGrid = styled.div`
   img:hover {
     transform: scale(1.2);
   }
-  @media (max-width: 800px) {
+  /* @media (max-width: 800px) {
     grid-template-columns: repeat(2, minmax(20px, 0.6fr));
+  } */
+  @media (max-width: 700px) {
+    margin-top: 1em;
+    width: 95%;
+    padding-right: 0;
+    padding-left: 0.5em;
+    grid-template-columns: repeat(4, minmax(15px, 0.5fr));
   }
 `
 

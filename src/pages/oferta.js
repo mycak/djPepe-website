@@ -16,12 +16,19 @@ const OfferStyles = styled.div`
     display: flex;
     flex-direction: row;
     margin-bottom: 2em;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
   }
   .leftside--container {
     max-height: 100%;
     width: 40%;
     display: flex;
     flex-direction: column;
+    @media (max-width: 700px) {
+      width: 100%;
+      align-items: center;
+    }
   }
 `
 const Oferta = ({ data }) => (

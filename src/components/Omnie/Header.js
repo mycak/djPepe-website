@@ -52,11 +52,11 @@ const Header = () => {
     const tl = gsap.timeline()
     tl.to(bg.current, {
       opacity: 1,
-      delay: 0.5,
+      delay: 0.8,
       duration: 0.8,
     })
     tl.to(quote.current, {
-      delay: 1.5,
+      delay: 1.8,
       opacity: 1,
       duration: 1,
     })

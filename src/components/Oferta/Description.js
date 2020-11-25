@@ -11,7 +11,7 @@ const DescriptionStyles = styled.div`
   @media (max-width: 700px) {
     margin-top: 3em;
     min-height: 5vh;
-    width: 80%;
+    width: 95%;
   }
   h2 {
     text-align: center;

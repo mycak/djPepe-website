@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger)
 
 const NewsStyles = styled.div`
-  margin-bottom: 3em;
+  margin-bottom: 6em;
   margin-left: auto;
   margin-right: auto;
   height: 100%;

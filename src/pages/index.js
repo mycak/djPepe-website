@@ -30,17 +30,19 @@ export default function HomePage({ data }) {
       <HomePageStyles className="section">
         <Hero />
         <h2>Aktualności</h2>
-        <News
-          dataImage={data.image1}
-          order
-          title="Music Snow Festival "
-          date="4.02.20"
-        />
-        <News
-          dataImage={data.image2}
-          title="Techno Weeding Party "
-          date="13.06.20"
-        />
+        <div className="news--container">
+          <News
+            dataImage={data.image1}
+            order
+            title="Music Snow Festival "
+            date="4.02.20"
+          />
+          <News
+            dataImage={data.image2}
+            title="Techno Weeding Party "
+            date="13.06.20"
+          />
+        </div>
         <Footer />
       </HomePageStyles>
     </>

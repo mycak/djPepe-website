@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import Img from 'gatsby-image'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Quote from './Quote'
-import contactImage from '../../assets/images/bg2.jpeg'
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Quote from './Quote';
+import contactImage from '../../assets/images/bg2.jpeg';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const MainStyles = styled.div`
   background: radial-gradient(
@@ -72,14 +72,14 @@ const MainStyles = styled.div`
       margin-right: auto;
     }
   }
-`
+`;
 const CardsList = ({ imageData }) => {
-  const textContainer = useRef(null)
-  const textContainer2 = useRef(null)
-  const textContainer3 = useRef(null)
+  const textContainer = useRef(null);
+  const textContainer2 = useRef(null);
+  const textContainer3 = useRef(null);
 
   useEffect(() => {
-    ;[textContainer, textContainer2, textContainer3].forEach(text => {
+    [textContainer, textContainer2, textContainer3].forEach((text) => {
       gsap.from(text.current, {
         y: 15,
         opacity: 0,
@@ -88,9 +88,9 @@ const CardsList = ({ imageData }) => {
           trigger: text.current,
           start: '80% bottom',
         },
-      })
-    })
-  }, [])
+      });
+    });
+  }, []);
   return (
     <MainStyles>
       <div className="history--card card--1">
@@ -138,7 +138,7 @@ const CardsList = ({ imageData }) => {
         </div>
       </div>
     </MainStyles>
-  )
-}
+  );
+};
 
-export default CardsList
+export default CardsList;

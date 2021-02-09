@@ -1,21 +1,23 @@
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import styled from 'styled-components'
-import Title from './Title'
-import contactImage from '../../assets/images/bg1.jpeg'
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import styled from 'styled-components';
+import Title from './Title';
+import contactImage from '../../assets/images/contact.jpg';
 
 const HeaderStyles = styled.div`
   opacity: 0;
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(
-      45deg,
-      rgba(0, 0, 0, 1) 37%,
-      rgba(0, 0, 0, 0) 62%,
-      rgba(0, 0, 0, 1) 89%
+      180deg,
+      rgba(0, 0, 0, 1) -20%,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.6) 90%,
+      rgba(0, 0, 0, 1) 100%
     ),
-    linear-gradient(180deg, rgba(0, 0, 0, 0) 79%, rgba(0, 0, 0, 1) 96%),
-    url(${contactImage});
+    /* linear-gradient(180deg, rgba(0, 0, 0, 0) 79%, rgba(0, 0, 0, 1) 96%), */
+      url(${contactImage});
+  background-position: 0% 70%;
   background-size: cover;
   .header--text {
     display: flex;
@@ -43,24 +45,24 @@ const HeaderStyles = styled.div`
     word-spacing: 0px;
     color: #adb5bd;
   }
-`
+`;
 const Header = () => {
-  const quote = useRef(null)
-  const bg = useRef(null)
+  const quote = useRef(null);
+  const bg = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
     tl.to(bg.current, {
       opacity: 1,
       delay: 0.8,
       duration: 0.8,
-    })
+    });
     tl.to(quote.current, {
       delay: 1.8,
       opacity: 1,
       duration: 1,
-    })
-  }, [])
+    });
+  }, []);
   return (
     <HeaderStyles ref={bg}>
       <Title />
@@ -75,7 +77,7 @@ const Header = () => {
         </p>
       </div>
     </HeaderStyles>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

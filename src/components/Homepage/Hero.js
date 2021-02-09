@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import heroImage from '../../assets/images/hero.jpg'
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import heroImage from '../../assets/images/hh.png';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const HeroStyles = styled.div`
   opacity: 0;
@@ -41,11 +41,11 @@ const HeroStyles = styled.div`
       rgba(255, 255, 255, 0) 30%
     );
   }
-`
+`;
 
 const Hero = () => {
-  const header = useRef(null)
-  const heroContainer = useRef(null)
+  const header = useRef(null);
+  const heroContainer = useRef(null);
 
   useEffect(() => {
     const addScrollTrigger = () => {
@@ -61,22 +61,22 @@ const Hero = () => {
           toggleActions: 'play none none none',
           duration: 2,
         },
-      })
-    }
+      });
+    };
 
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
     tl.to(heroContainer.current, {
       opacity: 1,
       delay: 0.2,
       duration: 1.5,
-    })
+    });
     tl.from(header.current, {
       opacity: 0,
       y: '-=20',
       duration: 0.5,
       onComplete: addScrollTrigger,
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <HeroStyles ref={heroContainer}>
@@ -86,7 +86,7 @@ const Hero = () => {
         </h1>
       </div>
     </HeroStyles>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

@@ -1,13 +1,13 @@
-import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import svg1 from '../../assets/images/dj.svg'
-import svg2 from '../../assets/images/dj2.svg'
-import svg3 from '../../assets/images/dj3.svg'
-import svg4 from '../../assets/images/dj4.svg'
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import svg1 from '../../assets/images/dj.svg';
+import svg2 from '../../assets/images/dj2.svg';
+import svg3 from '../../assets/images/dj3.svg';
+import svg4 from '../../assets/images/dj4.svg';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 const SVGListStyles = styled.div`
   width: 100%;
   height: 100%;
@@ -19,7 +19,7 @@ const SVGListStyles = styled.div`
   @media (max-width: 700px) {
     flex-direction: row;
   }
-`
+`;
 const SVG = styled.div`
   opacity: 0;
   margin-left: auto;
@@ -39,13 +39,13 @@ const SVG = styled.div`
   @media (max-width: 700px) {
     opacity: 1;
   }
-`
+`;
 
 const SVGList = () => {
-  const icons = useRef(null)
+  const icons = useRef(null);
   useEffect(() => {
-    const iconArray = [...icons.current.children]
-    iconArray.forEach(icon => {
+    const iconArray = [...icons.current.children];
+    iconArray.forEach((icon) => {
       gsap.to(icon, {
         opacity: 1,
         duration: 0.5,
@@ -53,9 +53,9 @@ const SVGList = () => {
           trigger: icon,
           start: '130% bottom',
         },
-      })
-    })
-  })
+      });
+    });
+  });
   return (
     <SVGListStyles ref={icons}>
       <SVG>
@@ -75,7 +75,7 @@ const SVGList = () => {
         <p>Eventy</p>
       </SVG>
     </SVGListStyles>
-  )
-}
+  );
+};
 
-export default SVGList
+export default SVGList;

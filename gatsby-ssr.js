@@ -6,10 +6,10 @@
 
 // You can delete this file if you're not using it
 
-import React from 'react'
-import Layout from './src/components/Layout'
+import React from 'react';
+import Layout from './src/components/Layout';
 
 export function wrapPageElement({ element, props }) {
   // eslint-disable-next-line react/jsx-props-no-spreading
-  return <Layout {...props}>{element}</Layout>
+  return <Layout {...props}>{element}</Layout>;
 }

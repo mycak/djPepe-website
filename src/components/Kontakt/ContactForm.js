@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import styled from 'styled-components'
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import styled from 'styled-components';
 
 const FormStyles = styled.div`
   flex: 1;
@@ -66,17 +66,17 @@ const FormStyles = styled.div`
       margin-bottom: 2em;
     }
   }
-`
+`;
 const ContactForm = () => {
-  const form = useRef(null)
+  const form = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
     tl.to(form.current, {
       opacity: 1,
       delay: 1.5,
       duration: 0.8,
-    })
-  })
+    });
+  });
   return (
     <FormStyles>
       <form>
@@ -99,7 +99,7 @@ const ContactForm = () => {
         </fieldset>
       </form>
     </FormStyles>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

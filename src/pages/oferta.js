@@ -1,12 +1,12 @@
-import React from 'react'
-import styled from 'styled-components'
-import { graphql } from 'gatsby'
+import React from 'react';
+import styled from 'styled-components';
+import { graphql } from 'gatsby';
 
-import SEO from './SEO'
-import Footer from '../components/Footer'
-import Description from '../components/Oferta/Description'
-import PhotoGallery from '../components/Oferta/PhotoGallery'
-import SVGList from '../components/Oferta/SVGList'
+import SEO from './SEO';
+import Footer from '../components/Footer';
+import Description from '../components/Oferta/Description';
+import PhotoGallery from '../components/Oferta/PhotoGallery';
+import SVGList from '../components/Oferta/SVGList';
 
 const OfferStyles = styled.div`
   min-height: 100vh;
@@ -30,7 +30,7 @@ const OfferStyles = styled.div`
       align-items: center;
     }
   }
-`
+`;
 const Oferta = ({ data }) => (
   <>
     <SEO />
@@ -45,7 +45,7 @@ const Oferta = ({ data }) => (
       <Footer />
     </OfferStyles>
   </>
-)
+);
 
 export const query = graphql`
   query {
@@ -162,6 +162,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default Oferta
+export default Oferta;

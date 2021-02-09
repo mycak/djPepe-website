@@ -1,6 +1,6 @@
-import gsap from 'gsap/gsap-core'
-import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
+import gsap from 'gsap/gsap-core';
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
 
 const FooterStyles = styled.div`
   opacity: 0;
@@ -38,18 +38,18 @@ const FooterStyles = styled.div`
       margin-right: 2em;
     }
   }
-`
+`;
 
 const Footer = () => {
-  const footer = useRef(null)
+  const footer = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
     tl.to(footer.current, {
       opacity: 1,
       delay: 2,
       duration: 2,
-    })
-  })
+    });
+  });
 
   return (
     <FooterStyles ref={footer}>
@@ -65,7 +65,7 @@ const Footer = () => {
         </li>
       </ul>
     </FooterStyles>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

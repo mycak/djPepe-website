@@ -1,8 +1,8 @@
-import React from 'react'
-import Modal from 'react-modal'
-import Img from 'gatsby-image'
+import React from 'react';
+import Modal from 'react-modal';
+import Img from 'gatsby-image';
 
-Modal.setAppElement(`#___gatsby`)
+Modal.setAppElement(`#___gatsby`);
 const ModalImage = ({ isOpen, closeModal, currentImage, imageData }) => (
   <Modal
     isOpen={isOpen}
@@ -36,6 +36,6 @@ const ModalImage = ({ isOpen, closeModal, currentImage, imageData }) => (
       <Img fluid={imageData[currentImage].childImageSharp.fluid} />
     </div>
   </Modal>
-)
+);
 
-export default ModalImage
+export default ModalImage;

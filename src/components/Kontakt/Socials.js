@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import styled from 'styled-components'
-import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai'
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import styled from 'styled-components';
+import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai';
 
 const SocialsStyles = styled.div`
   opacity: 0;
@@ -51,18 +51,18 @@ const SocialsStyles = styled.div`
       width: 50%;
     }
   }
-`
+`;
 
 const Socials = () => {
-  const links = useRef(null)
+  const links = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
     tl.to(links.current, {
       opacity: 1,
       delay: 1,
       duration: 0.8,
-    })
-  })
+    });
+  });
   return (
     <SocialsStyles ref={links}>
       <p className="pseudonym">El Toro</p>
@@ -88,7 +88,7 @@ const Socials = () => {
         </div>
       </div>
     </SocialsStyles>
-  )
-}
+  );
+};
 
-export default Socials
+export default Socials;

@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { TransitionLink } from 'gatsby-plugin-transition-link/components/TransitionLink'
-import loaderAnimation from './loaderAnimation'
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TransitionLink } from 'gatsby-plugin-transition-link/components/TransitionLink';
+import loaderAnimation from './loaderAnimation';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const NavigationStyles = styled.div`
   position: fixed;
@@ -51,19 +51,19 @@ const NavigationStyles = styled.div`
     color: #ced4da;
     font-size: clamp(10px, 2vw, 20px);
   }
-`
+`;
 const Navigation = () => {
-  const nav = useRef(null)
-  const navList = useRef(null)
+  const nav = useRef(null);
+  const navList = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
     tl.to(navList.current.children, {
       opacity: 1,
       delay: 2,
       duration: 0.8,
       stagger: 0.3,
-    })
+    });
     gsap.to(nav.current, {
       backgroundColor: '#000000',
       scrollTrigger: {
@@ -71,8 +71,8 @@ const Navigation = () => {
         end: '400',
         scrub: true,
       },
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <NavigationStyles ref={nav} className="nav">
@@ -140,7 +140,7 @@ const Navigation = () => {
         </li>
       </ul>
     </NavigationStyles>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

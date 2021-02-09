@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import font from '../assets/fonts/SyneMono-Regular.ttf'
+import { createGlobalStyle } from 'styled-components';
+import font from '../assets/fonts/SyneMono-Regular.ttf';
 
 const GlobalStyles = createGlobalStyle`
   /* @font-face {
@@ -47,5 +47,5 @@ const GlobalStyles = createGlobalStyle`
   .loader--opacity {
     opacity: 0;
   }
-`
-export default GlobalStyles
+`;
+export default GlobalStyles;

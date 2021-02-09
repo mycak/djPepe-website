@@ -1,9 +1,9 @@
-import React, { useRef, useEffect } from 'react'
-import styled from 'styled-components'
-import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React, { useRef, useEffect } from 'react';
+import styled from 'styled-components';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const QuoteStyles = styled.div`
   margin-left: 35%;
@@ -25,9 +25,9 @@ const QuoteStyles = styled.div`
     margin-bottom: 2em;
     margin-top: 3em;
   }
-`
+`;
 const Quote = () => {
-  const quote = useRef(null)
+  const quote = useRef(null);
 
   useEffect(() => {
     gsap.from(quote.current, {
@@ -38,8 +38,8 @@ const Quote = () => {
         trigger: quote.current,
         start: '80% bottom',
       },
-    })
-  }, [])
+    });
+  }, []);
   return (
     <QuoteStyles ref={quote}>
       <p>
@@ -51,7 +51,7 @@ const Quote = () => {
         <span className="signature"> - H&M Event Director</span>
       </p>
     </QuoteStyles>
-  )
-}
+  );
+};
 
-export default Quote
+export default Quote;

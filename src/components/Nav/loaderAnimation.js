@@ -1,13 +1,13 @@
-import CSSRulePlugin from 'gsap/CSSRulePlugin'
-import { gsap } from 'gsap'
+import CSSRulePlugin from 'gsap/CSSRulePlugin';
+import { gsap } from 'gsap';
 
-gsap.registerPlugin(CSSRulePlugin)
+gsap.registerPlugin(CSSRulePlugin);
 
 const loaderAnimation = () => {
-  const ruleAfter = CSSRulePlugin.getRule('body:after')
-  const ruleBefore = CSSRulePlugin.getRule('body:before')
-  const loaderopacity = CSSRulePlugin.getRule('.loader--opacity')
-  const tl = gsap.timeline()
+  const ruleAfter = CSSRulePlugin.getRule('body:after');
+  const ruleBefore = CSSRulePlugin.getRule('body:before');
+  const loaderopacity = CSSRulePlugin.getRule('.loader--opacity');
+  const tl = gsap.timeline();
   tl.to(
     ruleBefore,
     {
@@ -18,7 +18,7 @@ const loaderAnimation = () => {
       },
     },
     'close'
-  )
+  );
   tl.to(
     ruleAfter,
     {
@@ -29,13 +29,13 @@ const loaderAnimation = () => {
       },
     },
     'close'
-  )
+  );
   tl.to(loaderopacity, {
     duration: 0.2,
     cssRule: {
       opacity: 1,
     },
-  })
+  });
   tl.to(
     ruleBefore,
     {
@@ -47,7 +47,7 @@ const loaderAnimation = () => {
       },
     },
     'open'
-  )
+  );
   tl.to(
     ruleAfter,
     {
@@ -59,7 +59,7 @@ const loaderAnimation = () => {
       },
     },
     'open'
-  )
+  );
   tl.to(
     loaderopacity,
     {
@@ -70,7 +70,7 @@ const loaderAnimation = () => {
       },
     },
     'open'
-  )
-}
+  );
+};
 
-export default loaderAnimation
+export default loaderAnimation;

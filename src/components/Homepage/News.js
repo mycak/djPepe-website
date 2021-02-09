@@ -1,10 +1,10 @@
-import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import Img from 'gatsby-image'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import React, { useEffect, useRef } from 'react';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const NewsStyles = styled.div`
   margin-bottom: 6em;
@@ -21,7 +21,7 @@ const NewsStyles = styled.div`
   column-gap: 1em;
   h3 {
     grid-area: 1 / 1 / 2 / 3;
-    justify-self: ${props => props.order[1]};
+    justify-self: ${(props) => props.order[1]};
     margin-bottom: 2em;
   }
   .date {
@@ -29,7 +29,7 @@ const NewsStyles = styled.div`
     color: #adb5bd;
   }
   .image--container {
-    grid-area: ${props => props.order[0]};
+    grid-area: ${(props) => props.order[0]};
     min-width: 35vw;
     min-height: 50vh;
     @media (max-width: 900px) {
@@ -41,20 +41,20 @@ const NewsStyles = styled.div`
     height: auto;
   }
   p {
-    text-align: ${props => props.order[2]};
+    text-align: ${(props) => props.order[2]};
     color: #ced4da;
     width: 100%;
   }
-`
+`;
 
 const News = ({ dataImage, order, title, date }) => {
   const grid = order
     ? ['2 / 1 / 3 / 2', 'start', 'left']
-    : ['2 / 2 / 3 / 3', 'end', 'right']
-  const news = useRef(null)
-  const newsTitle = useRef(null)
-  const newsImage = useRef(null)
-  const newsDescription = useRef(null)
+    : ['2 / 2 / 3 / 3', 'end', 'right'];
+  const news = useRef(null);
+  const newsTitle = useRef(null);
+  const newsImage = useRef(null);
+  const newsDescription = useRef(null);
 
   useEffect(() => {
     gsap.from(newsTitle.current, {
@@ -66,7 +66,7 @@ const News = ({ dataImage, order, title, date }) => {
         scrub: true,
         stagger: 2,
       },
-    })
+    });
     gsap.from(newsImage.current, {
       opacity: 0,
       scrollTrigger: {
@@ -76,7 +76,7 @@ const News = ({ dataImage, order, title, date }) => {
         scrub: true,
         stagger: 2,
       },
-    })
+    });
     gsap.from(newsDescription.current, {
       opacity: 0,
       scrollTrigger: {
@@ -86,8 +86,8 @@ const News = ({ dataImage, order, title, date }) => {
         scrub: true,
         stagger: 2,
       },
-    })
-  }, [])
+    });
+  }, []);
   return (
     <NewsStyles ref={news} order={grid}>
       <h3 ref={newsTitle} className="header">
@@ -106,7 +106,7 @@ const News = ({ dataImage, order, title, date }) => {
         Ullamco fugiat labore do aliquip.
       </p>
     </NewsStyles>
-  )
-}
+  );
+};
 
-export default News
+export default News;

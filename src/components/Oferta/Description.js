@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from 'react'
-import styled from 'styled-components'
-import gsap from 'gsap'
+import React, { useRef, useEffect } from 'react';
+import styled from 'styled-components';
+import gsap from 'gsap';
 
 const DescriptionStyles = styled.div`
   width: 100%;
@@ -34,18 +34,18 @@ const DescriptionStyles = styled.div`
   .highlight {
     color: #fff;
   }
-`
+`;
 const Description = () => {
-  const text = useRef(null)
+  const text = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
     tl.to(text.current.children, {
       opacity: 1,
       delay: 1,
       duration: 1,
       stagger: 0.5,
-    })
-  }, [])
+    });
+  }, []);
   return (
     <DescriptionStyles ref={text}>
       <h2>Moje usługi</h2>
@@ -60,7 +60,7 @@ const Description = () => {
         <span className="highlight">eventy </span> firmowe.
       </p>
     </DescriptionStyles>
-  )
-}
+  );
+};
 
-export default Description
+export default Description;

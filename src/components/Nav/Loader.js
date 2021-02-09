@@ -1,5 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 const LoaderStyles = styled.div`
   @keyframes delay {
@@ -58,7 +58,7 @@ const LoaderStyles = styled.div`
     background-color: #ed1b72;
     animation-delay: -0.3s;
   }
-`
+`;
 const Loader = () => (
   <LoaderStyles className="loader--opacity">
     <div className="bar1" />
@@ -68,6 +68,6 @@ const Loader = () => (
     <div className="bar5" />
     <div className="bar6" />
   </LoaderStyles>
-)
+);
 
-export default Loader
+export default Loader;

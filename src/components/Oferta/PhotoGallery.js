@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
-import styled from 'styled-components'
-import Img from 'gatsby-image'
-import gsap from 'gsap'
-import ModalImage from './ModalImage'
+import React, { useEffect, useRef, useState } from 'react';
+import styled from 'styled-components';
+import Img from 'gatsby-image';
+import gsap from 'gsap';
+import ModalImage from './ModalImage';
 
 const PhotosGrid = styled.div`
   width: 60%;
@@ -34,29 +34,29 @@ const PhotosGrid = styled.div`
     padding-left: 0.5em;
     grid-template-columns: repeat(4, minmax(15px, 0.5fr));
   }
-`
+`;
 
 const PhotoGallery = ({ imageData }) => {
-  const [modalOpen, setModalOpen] = useState(false)
-  const [currentImage, setCurrentImage] = useState(0)
-  const photos = useRef(null)
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentImage, setCurrentImage] = useState(0);
+  const photos = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
     tl.to(photos.current.children, {
       opacity: 1,
       duration: 1,
       stagger: 0.1,
-    })
-  }, [])
+    });
+  }, []);
 
   const openModal = (data, i) => {
-    setCurrentImage(i)
-    setModalOpen(true)
-  }
+    setCurrentImage(i);
+    setModalOpen(true);
+  };
   const closeModal = () => {
-    setModalOpen(false)
-  }
+    setModalOpen(false);
+  };
   return (
     <PhotosGrid ref={photos}>
       {Object.keys(imageData).map((key, i) => (
@@ -64,10 +64,10 @@ const PhotoGallery = ({ imageData }) => {
           className="image--container"
           role="button"
           onClick={() => openModal(imageData, i)}
-          onKeyDown={e => {
-            e.persist()
+          onKeyDown={(e) => {
+            e.persist();
             if (e.key === 'Enter') {
-              openModal(imageData, i)
+              openModal(imageData, i);
             }
           }}
           tabIndex={0}
@@ -89,7 +89,7 @@ const PhotoGallery = ({ imageData }) => {
         currentImage={currentImage}
       />
     </PhotosGrid>
-  )
-}
+  );
+};
 
-export default PhotoGallery
+export default PhotoGallery;

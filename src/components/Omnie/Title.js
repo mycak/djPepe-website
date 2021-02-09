@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from 'react'
-import gsap from 'gsap'
-import styled from 'styled-components'
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import styled from 'styled-components';
 
 const TitleStyles = styled.div`
   display: flex;
@@ -26,20 +26,20 @@ const TitleStyles = styled.div`
   .word--3 {
     margin-left: 30%;
   }
-`
+`;
 const Title = () => {
-  const title = useRef(null)
+  const title = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
     tl.to(title.current.children, {
       x: '+= 10',
       opacity: 1,
       delay: 1.5,
       duration: 1,
       stagger: 0.5,
-    })
-  }, [])
+    });
+  }, []);
 
   return (
     <TitleStyles ref={title}>
@@ -53,6 +53,6 @@ const Title = () => {
         <p>Pasja</p>
       </div>
     </TitleStyles>
-  )
-}
-export default Title
+  );
+};
+export default Title;

@@ -4,7 +4,7 @@ import Img from 'gatsby-image';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Quote from './Quote';
-import contactImage from '../../assets/images/bg2.jpeg';
+import contactImage from '../../assets/images/nonused/bg3.jpeg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,10 +35,7 @@ const MainStyles = styled.div`
     margin-top: 4em;
     margin-bottom: 2em;
     display: flex;
-    flex-direction: row;
-    @media (max-width: 750px) {
-      flex-direction: column;
-    }
+    align-items: center;
   }
   .card--1 {
     margin-left: 35%;
@@ -59,6 +56,7 @@ const MainStyles = styled.div`
   @media (max-width: 750px) {
     .history--card {
       width: 80%;
+      flex-direction: column;
     }
     .card--3 {
       margin-left: 10%;
@@ -73,6 +71,7 @@ const MainStyles = styled.div`
     }
   }
 `;
+
 const CardsList = ({ imageData }) => {
   const textContainer = useRef(null);
   const textContainer2 = useRef(null);

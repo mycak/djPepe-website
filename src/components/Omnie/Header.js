@@ -19,6 +19,9 @@ const HeaderStyles = styled.div`
       url(${contactImage});
   background-position: 0% 70%;
   background-size: cover;
+  @media (max-width: 750px) {
+    background-position: 35% 70%;
+  }
   .header--text {
     display: flex;
     flex-direction: row;

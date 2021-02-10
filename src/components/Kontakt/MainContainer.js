@@ -17,6 +17,7 @@ const MainWrapper = styled.div`
   flex-direction: row;
   @media (max-width: 700px) {
     flex-direction: column;
+    background-position: 35% 70%;
   }
 `;
 const MainContainer = ({ children }) => {
